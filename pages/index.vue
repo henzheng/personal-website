@@ -32,18 +32,20 @@
         <div class="section" id="skills">
             <Heading number="03." title="Skills" />
             <Section image="/images/innovation.png" alt="innovation">
-                <ul class="list-disc p-10 text-md">
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Autodesk AutoCAD Certified</li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">OSHA-10 Certified</li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Proficient in multiple programming and markup languages
+                <ul class="list-disc p-6 text-md columns-2 gap-12">
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Autodesk AutoCAD Certified</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">OSHA-10 Certified</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Proficient in various programming and markup languages
                         <br> (HTML, CSS, Javascript, Typescript, Python - Currently Learning C++)
                     </li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Understanding of web development frameworks
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Understanding of web development frameworks
                         <br> (React, Vue.js, Nuxt3, Express.js, TailwindCSS)
                     </li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Experience working with Ubuntu, Docker and Git</li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Comfortable working individually or collaboratively</li>
-                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110">Self-motivated worker and a dependable problem solver</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Experienced in working with Ubuntu, Docker, and Git, enabling efficient and streamlined development processes</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Able to work effectively both independently and as part of a collaborative team, adapting to different work environments and technologies</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Self-motivated and proactive worker, consistently taking initiative to achieve project goals and meet deadlines</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Strong problem-solving skills, capable of analyzing complex issues and finding practical solutions</li>
+                    <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Detail-oriented and dependable, ensuring accuracy and quality in work deliverables</li>
                 </ul>
             </Section>
         </div>
@@ -92,80 +94,53 @@ onMounted(() => {
 
 <style scoped>
 .main-content {
-    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 100vh repeat(4, 1fr) 200px;
-    row-gap: 225px;
+    gap: 40vh;
+}
+
+.main-content:nth-last-child(2) {
+    gap: 20vh;
 }
 
 .section {
+    flex-grow: 1;
     margin: 0 auto;
-    max-width: 1000px;
+    width: fit-content;
+    /* max-width: 1000px; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
+    gap: 1rem;
 }
 
 #landing {
-    width: 900px;
+    margin-top: 30vh;
+    width: 50vw;
+    margin: 30vh auto;
 }
 
-#landing {
-    grid-row-start: 1;
-}
-
-#about {
-    margin: auto;
-    width: 90%;
-    grid-row-start: 2;
-}
-
-#work {
-    margin: auto;
-    width: 90%;
-    grid-row-start: 3;
-}
-
-#skills {
-    margin: auto;
-    width: 90%;
-    grid-row-start: 4;
-}
-
-#contact {
-    margin: auto;
-    width: 90%;
-    grid-row-start: 5;
+#type {
+    white-space: nowrap;
 }
 
 @media only screen and (max-width: 960px) {
-    #landing {
-        margin-top: -350px;
-        width: 600px;
-    }
-
-    #about {
-        width: 600px;
-    }
-
-    #work {
-        width: 600px;
-    }
-
-    #skills {
+    #landing,
+    #about,
+    #work,
+    #skills,
+    #contact, {
         width: 600px;
     }
 
     #skills .section-text {
         width: 400px;
         height: 500px;
-    }
-
-    #contact {
-        width: 600px;
     }
 
     #type {
@@ -186,54 +161,32 @@ onMounted(() => {
     }
 }
 
+/* Tablets */
 @media only screen and (max-width: 768px) {
+    .section li,
     .section p {
-        font-size: 14px;
-    }
-
-    .section li {
-        font-size: 14px;
-    }
-
-    .main-content {
-        margin-top: 25%;
-        grid-template-rows: 750px repeat(4, 1fr) 100px;
-    }
-
-    .big-heading {
-        font-size: 35px;
+        font-size: 0.9rem;
     }
 
     #type {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     #landing p {
-        font-size: 16px;
-    }
-
-    #landing {
-        width: 350px;
-        grid-row-start: 1;
-    }
-
-    #landing h1 {
-        font-size: 30px;
+        font-size: 1rem;
     }
 
     #landing h2 {
-        font-size: 35px;
+        font-size: 2.25rem;
         font-weight: 600;
     }
 
-    #about {
-        width: 350px;
-        grid-row-start: 2;
-    }
-
-    #work {
-        width: 350px;
-        grid-row-start: 3;
+    #landing,
+    #about,
+    #work,
+    #skills,
+    #contact {
+        width: 80vw;
     }
 
     #work img {
@@ -241,24 +194,10 @@ onMounted(() => {
         margin-left: 30px;
     }
 
-    #work .inner {
-        margin-left: 50px;
-    }
-
-    #skills {
-        width: 350px;
-        grid-row-start: 4;
-    }
-
     #skills .section-text {
         margin-left: 15px;
         width: 380px;
         height: 350px;
-    }
-
-    #contact {
-        width: 350px;
-        grid-row-start: 5;
     }
 }
 </style>

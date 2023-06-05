@@ -1,5 +1,5 @@
 <template>
-    <footer class="m-auto md:w-[600px] lg:w-[80vw] flex flex-col justify-center items-center mb-12 gap-2">
+    <footer class="m-auto md:w-[600px] lg:w-[80vw] flex flex-col justify-center items-center mb-[3rem] gap-2">
         <div>
             <a class="font-mono text-base md:text-xl text-primary-blue no-underline" href="mailto:zhenghenry2@gmail.com">zhenghenry2@gmail.com</a>
         </div>
