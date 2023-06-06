@@ -12,7 +12,7 @@
             </li>
         </div>
         <Atom v-if="isMobile" @click="returnToTop" />
-        <img v-else class="logo" src="/images/uranus.png" alt="website-logo" @click="returnToTop">
+        <img class="hidden md:block h-[6rem] w-[6rem] p-6 ml-auto cursor-pointer" src="/images/uranus.png" alt="website logo" @click="returnToTop">
     </div>
 </template>
 
@@ -20,7 +20,7 @@
 const isMobile = ref(false);
 
 onMounted(() => {
-    if(window.innerWidth <= 960) {
+    if(window.innerWidth <= 768) {
         isMobile.value = true;
     }
 })
@@ -36,15 +36,6 @@ function returnToTop() {
 </script>
 
 <style scoped>
-
-.logo {
-    height: 6rem;
-    width: 6rem;
-    padding: 1.5rem;
-    margin-left: auto;
-    cursor: pointer;
-}
-
 .links {
     text-align: center;
     list-style: none;

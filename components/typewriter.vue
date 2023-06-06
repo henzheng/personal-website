@@ -3,15 +3,16 @@
 </template>
 
 <script setup>
+const text = ref("");
 const props = defineProps({
     text: String,
-})
-onMounted(() => {
+});
+
+onMounted(async () => {
     let letter = 0;
-    const text = ref(props.text);
     function typeText() {
-        if (letter < text.value.length) {
-            text.value += text.value.charAt(letter);
+        if (letter < props.text.length) {
+            text.value += props.text.charAt(letter);
             letter++;
             let speed = 50
             setTimeout(typeText, speed);
