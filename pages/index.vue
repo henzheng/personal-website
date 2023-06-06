@@ -2,13 +2,13 @@
     <div class="main-content">
         <div class="section" id="landing">
             <h1 class="text-primary-blue">Hey I'm</h1>
-            <h2 class="text-[4rem] md:text-5xl lg:text-[4rem]">Henry Zheng</h2>
-            <Typewriter class="text-[4rem] opacity-50" text="Programmer, Tech Enthusiast" />
+            <h2 class="text-[4rem] md:text-5xl xl:text-[4rem]">Henry Zheng</h2>
+            <Typewriter class="text-[4rem] md:text-5xl xl:text-[4rem] opacity-50" text="Programmer, Tech Enthusiast" />
             <p class="mb-2">Currently a student 
                 <a class="text-primary-blue" href="https://www.siths.org" target="_blank">@ Staten Island Technical High School 🎓</a>
             </p>
             <li class="list-none rounded-md text-primary-blue border border-solid border-primary-blue p-3 no-underline cursor-pointer transition-all ease-in-out duration-300 hover:scale-110">
-                <a class="color-primary-blue" v-on:click="scrollTo('about')">Explore the website!</a>
+                <a class="color-primary-blue" @click="scrollTo('about')">Explore the website!</a>
             </li>
         </div>
         <div class="section" id="about">

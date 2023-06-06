@@ -3,5 +3,10 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/robots',
         '@nuxtjs/tailwindcss',
-    ]
+    ],
+    app: {
+        head: {
+            title: "Henry Zheng"
+        }
+    }
 })

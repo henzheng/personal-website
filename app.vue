@@ -4,7 +4,7 @@
       <Loading v-if="!loaded" />
       <Topbar v-if="loaded" />
       <Social v-if="loaded" />
-      <NuxtPage/>
+      <NuxtPage v-if="loaded" /> 
     </NuxtLayout>
   </div>
 </template>
