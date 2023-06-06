@@ -2,7 +2,7 @@
     <div class="main-content">
         <div class="section" id="landing">
             <h1 class="text-primary-blue">Hey I'm</h1>
-            <h2 class="text-[4rem]">Henry Zheng</h2>
+            <h2 class="text-[4rem] md:text-5xl lg:text-[4rem]">Henry Zheng</h2>
             <Typewriter class="text-[4rem] opacity-50" text="Programmer, Tech Enthusiast" />
             <p class="mb-2">Currently a student 
                 <a class="text-primary-blue" href="https://www.siths.org" target="_blank">@ Staten Island Technical High School 🎓</a>
@@ -32,7 +32,7 @@
         <div class="section" id="skills">
             <Heading number="03." title="Skills" />
             <Section image="/images/innovation.png" alt="innovation">
-                <ul class="list-disc p-6 text-md columns-2 gap-12">
+                <ul class="list-disc p-6 text-md md:text-md md:columns-2 gap-12">
                     <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Autodesk AutoCAD Certified</li>
                     <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">OSHA-10 Certified</li>
                     <li class="mb-2 transition-all ease-in-out duration-300 hover:scale-110 md:break-inside-avoid-column">Proficient in various programming and markup languages
@@ -111,6 +111,7 @@ onMounted(() => {
     flex-grow: 1;
     margin: 0 auto;
     width: fit-content;
+    width: 65vw;
     /* max-width: 1000px; */
     display: flex;
     flex-direction: column;
@@ -162,7 +163,7 @@ onMounted(() => {
 }
 
 /* Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     .section li,
     .section p {
         font-size: 0.9rem;
@@ -186,12 +187,11 @@ onMounted(() => {
     #work,
     #skills,
     #contact {
-        width: 80vw;
+        width: 90vw;
     }
 
-    #work img {
-        margin-top: 150px;
-        margin-left: 30px;
+    #landing {
+        margin-left: 25vw;
     }
 
     #skills .section-text {
@@ -199,5 +199,16 @@ onMounted(() => {
         width: 380px;
         height: 350px;
     }
+
+    .section {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #landing {
+        margin-left: 1rem;
+    }
+    
 }
 </style>
