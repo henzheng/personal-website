@@ -20,7 +20,3 @@ onMounted(async () => {
   loaded.value = true;
 })
 </script>
-
-<style>
-@import "~/assets/index.css";
-</style>
